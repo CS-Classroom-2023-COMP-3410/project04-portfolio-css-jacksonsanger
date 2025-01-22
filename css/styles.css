@@ -1,0 +1,252 @@
+/* Body Styling */
+
+
+/* Reset body and html margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the page stretches to the full viewport height */
+    background-color: #1e1e1e; /* Match the theme background */
+}
+
+body {
+    background-color: #1e1e1e; /* Terminal-inspired dark background */
+    color: #c5c8c6; /* Light gray text for readability */
+    font-family: 'Fira Code', monospace; /* Programming font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #1e1e1e; /* Dark background for the navbar */
+    border-bottom: 2px solid #99ff33; /* Neon green border accent */
+    padding: 1rem;
+}
+
+.navbar-menu {
+    background-color: #1e1e1e; /* Match navbar background on mobile */
+}
+
+.navbar .navbar-item {
+    color: #c5c8c6; /* Light gray for default text */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effects for Navbar Items */
+.navbar .navbar-item:hover {
+    color: #99ff33; /* Bright neon green on hover */
+    text-shadow: 0px 0px 8px #99ff33; /* Neon glow effect */
+    text-decoration: none; /* Remove underline */
+    background-color: grey; /* Gray background on hover */
+}
+
+/* Navbar Brand */
+.navbar-brand .navbar-item {
+    color: #ff00ff; /* Magenta for branding */
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-brand .navbar-item:hover {
+    color: #ff5555; /* Red hover effect for branding */
+    text-shadow: 0px 0px 8px #ff5555; /* Red glow effect */
+}
+
+/* Hamburger Menu */
+
+/* Default Hamburger Menu */
+.navbar-burger {
+    color: #99ff33; /* Neon green by default */
+    border: 1px solid #99ff33; /* Neon green border */
+    transition: color 0.3s ease, border-color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover Effect for Default Hamburger */
+.navbar-burger:hover {
+    color: #b6ff57; /* Brighter green hover effect */
+    border-color: #b6ff57;
+    text-shadow: 0px 0px 8px #b6ff57; /* Neon glow */
+}
+
+/* Active State (Menu Open, Showing X) */
+.navbar-burger.is-active {
+    color: #ff5555; /* Red for active state (X) */
+    border-color: #ff5555; /* Red border for active state */
+    transition: color 0.3s ease, border-color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover Effect for Active X */
+.navbar-burger.is-active:hover {
+    color: #ff8888; /* Brighter red hover effect */
+    border-color: #ff8888;
+    text-shadow: 0px 0px 8px #ff8888; /* Neon glow */
+}
+
+/* Heading Styling */
+h1, h2, h3, h4, h5, h6 {
+    color: #99ff33; /* Neon green for all headings */
+    font-family: 'Fira Code', monospace;
+    text-shadow: 0px 0px 4px #99ff33; /* Subtle neon glow */
+    margin-bottom: 1rem;
+}
+
+/* Apply Glow Animation to Important Headings */
+h1 {
+    animation: glow 2s infinite ease-in-out;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0px 0px 4px #99ff33;
+    }
+    50% {
+        text-shadow: 0px 0px 8px #99ff33;
+    }
+    100% {
+        text-shadow: 0px 0px 4px #99ff33;
+    }
+}
+
+/* Links */
+a {
+    color: #ff00ff; /* Magenta for links */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #99ff33; /* Neon green hover for links */
+    text-shadow: 0px 0px 6px #99ff33; /* Neon glow */
+}
+
+/* Programming-Themed Image Styling */
+.image-grid img {
+    border: 2px solid #99ff33; /* Neon green border for images */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Keep image behind captions */
+}
+
+.image-grid img:hover {
+    transform: scale(1.03); /* Slightly smaller zoom effect */
+    box-shadow: 0px 0px 10px #99ff33; /* Neon green glow */
+    z-index: 0; /* Prevent overlap with captions */
+}
+
+.image-grid p {
+    position: relative;
+    z-index: 2; /* Ensure captions stay on top */
+    color: #c5c8c6; /* Light gray for readability */
+    margin-top: 0.5rem; /* Add spacing above captions */
+}
+
+/* General Text Styling, add to subtitle too for readability */
+.content, .subtitle {
+    color: #c5c8c6; /* Light gray text for readability */
+}
+
+/* Fix excess white space at the bottom */
+section:last-of-type {
+    padding-bottom: 1rem; /* Reduce bottom padding */
+}
+
+/* Input Field Styling */
+input.input, textarea.textarea {
+    background-color: #1e1e1e; /* Match the dark theme */
+    color: #c5c8c6; /* Light gray text for readability */
+    border: 1px solid #99ff33; /* Neon green border */
+    font-family: 'Fira Code', monospace;
+}
+
+input.input::placeholder, textarea.textarea::placeholder {
+    color: #c5c8c6; /* Light gray placeholder to match theme */
+    font-style: italic;
+}
+
+/* Label Styling */
+label.label {
+    color: #c5c8c6; /* Make labels the same light gray as other text */
+    font-family: 'Fira Code', monospace;
+}
+
+/* Hover and Focus Effects for Inputs */
+input.input:hover, textarea.textarea:hover {
+    border-color: #b6ff57; /* Brighter green border on hover */
+}
+
+input.input:focus, textarea.textarea:focus {
+    border-color: #ff5555; /* Red border on focus */
+    box-shadow: 0 0 5px #ff5555; /* Red glow on focus */
+    outline: none;
+}
+
+/* General Button Styling */
+.button {
+    background-color: #99ff33; /* Neon green default background */
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    border: 2px solid #99ff33; /* Neon green border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Success Button Styling */
+.button.is-success {
+    background-color: #99ff33; /* Neon green background */
+    color: #1e1e1e; /* Dark text for contrast */
+    border-color: #99ff33;
+}
+
+.button.is-success:hover {
+    background-color: #b6ff57; /* Brighter green on hover */
+    box-shadow: 0 0 8px #99ff33; /* Neon green glow effect */
+}
+
+/* Danger Button Styling */
+.button.is-danger {
+    background-color: #ff5555; /* Red background */
+    color: #1e1e1e; /* Dark text for contrast */
+    border-color: #ff5555;
+}
+
+.button.is-danger:hover {
+    background-color: #ff6666; /* Slightly lighter red on hover */
+    box-shadow: 0 0 8px #ff5555; /* Red glow effect */
+}
+
+/* Hover Effect for General Buttons */
+.button:hover {
+    background-color: #b6ff57; /* Brighter green for default hover */
+    box-shadow: 0 0 8px #99ff33; /* Neon green glow */
+}
+
+/* Focus Effects */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 10px #99ff33, 0 0 20px #ff5555; /* Combined glow for focus */
+}
+
+/* Responsive GIF Container */
+.iframe-container {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+

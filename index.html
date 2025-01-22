@@ -5,45 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jackson Sanger's Programming Portfolio landing page">
     <title>Programming Portfolio</title>
-    
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--Custom font-->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/navbar.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <table>
-        <tr>
-            <td>
-                <nav>
-                    <a href="index.html"><b>Home</b></a> |
-                    <a href="about.html"><b>About Me</b></a> |
-                    <a href="technical_projects/technical_projects.html"><b>Technical Projects</b></a> |
-                    <a href="art_projects/art_projects.html"><b>Art Projects</b></a> |
-                    <a href="contact.html"><b>Contact</b></a>
-                </nav>
-            </td>
-        </tr>
-    </table>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+          <!-- Branding Section -->
+          <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+              <strong>Jackson's Portfolio</strong>
+            </a>
+            <!-- Burger Icon for Mobile -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+      
+          <!-- Navigation Links Section -->
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start">
+              <!-- Left-aligned Links -->
+              <a class="navbar-item" href="about.html">About Me</a>
+              <a class="navbar-item" href="technical_projects/technical_projects.html">Technical Projects</a>
+              <a class="navbar-item" href="art_projects/art_projects.html">Art Projects</a>
+            </div>
+            <div class="navbar-end">
+              <!-- Right-aligned Links -->
+              <a class="navbar-item" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
 
     <!-- Welcome Section -->
-    <h1>Welcome to My Programming Portfolio</h1>
-    <p>Hi, I'm Jackson Sanger! I invite you to explore my technical projects, where I dive into the details of how I wrote my code, and my art gallery, showcasing visual outputs created through programming.</p>
-    <p>In my free time, I enjoy playing basketball and working out. I’m also a big fan of movies and TV shows like <i>The Dark Knight</i> and <i>Attack on Titan</i>. Feel free to browse around and learn more about me and my work!</p>
-    
-    <!-- Table to hold images of a sample code snippet and some of my favorite movies/shows-->
-    <table>
-        <tr>
-            <td>
-                    <img src="images/dark_knight.jpg" alt="The Dark Knight Movie Poster" width="400">
-                    <p><i>The Dark Knight</i></p>
-            </td>
-            <td>
-                    <img src="images/code_snippet.png" alt="Code Snippet" width="400">
-                    <p><i>Code Snippet</i></p>
-            </td>
-            <td>
-                    <img src="images/attack_on_titan.jpg" alt="Attack on Titan Poster" width="400">
-                    <p><i>Attack on Titan</i></p>
-            </td>
-        </tr>
-    </table>
+    <section class="section welcome-section">
+        <div class="container">
+            <h1 class="title">Welcome to My Programming Portfolio</h1>
+            <p class="subtitle">
+                Hi, I'm Jackson Sanger! I invite you to explore my technical projects, where I dive into the details of how I wrote my code, and my art gallery, showcasing visual outputs created through programming.
+            </p>
+            <p class="content">
+                In my free time, I enjoy playing basketball and working out. I’m also a big fan of movies and TV shows like <i>The Dark Knight</i> and <i>Attack on Titan</i>. Feel free to browse around and learn more about me and my work!
+            </p>
+        </div>
+    </section>
+
+    <!-- Image Grid Section -->
+    <section class="section">
+        <div class="container">
+            <!--Make multiline so columns stack on mobile-->
+            <div class="columns is-multiline is-centered">
+                <div class="column is-4 image-grid">
+                    <figure class="image is-3by4">
+                        <img src="images/dark_knight.jpg" alt="The Dark Knight Movie Poster">
+                    </figure>
+                    <p class="has-text-centered"><i>The Dark Knight</i></p>
+                </div>
+                <div class="column is-4 image-grid">
+                    <!--Make square this one fits in the container by making square-->
+                    <figure class="image is-square">
+                        <img src="images/code_snippet.png" alt="Code Snippet">
+                    </figure>
+                    <p class="has-text-centered"><i>Code Snippet</i></p>
+                </div>
+                <div class="column is-4 image-grid">
+                    <figure class="image is-3by4">
+                        <img src="images/attack_on_titan.jpg" alt="Attack on Titan Poster">
+                    </figure>
+                    <p class="has-text-centered"><i>Attack on Titan</i></p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

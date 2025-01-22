@@ -5,52 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Art Projects page of Jackson Sanger's Programming Portfolio">
     <title>Art Projects</title>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Navbar Script -->
+    <script src="../scripts/navbar.js" defer></script>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <table>
-        <tr>
-            <td>
-                <nav>
-                    <a href="index.html"><b>Home</b></a> |
-                    <a href="about.html"><b>About Me</b></a> |
-                    <a href="technical_projects/technical_projects.html"><b>Technical Projects</b></a> |
-                    <a href="art_projects/art_projects.html"><b>Art Projects</b></a> |
-                    <a href="contact.html"><b>Contact</b></a>
-                </nav>
-            </td>
-        </tr>
-    </table>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <strong>Jackson's Portfolio</strong>
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="../about.html">About Me</a>
+                    <a class="navbar-item" href="../technical_projects/technical_projects.html">Technical Projects</a>
+                    <a class="navbar-item" href="art_projects.html">Art Projects</a>
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Page Introduction -->
-    <h1>Art Projects</h1>
-    <p>All the projects on this page use the concept of recursion in programming to create visual art pieces. Each project demonstrates how mathematical principles and recursion can create complex and beautiful designs with relatively little code.</p>
+    <section class="section">
+        <div class="container has-text-centered">
+            <h1 class="title">Art Projects</h1>
+            <p class="subtitle">
+                All the projects on this page use the concept of recursion in programming to create visual art pieces.
+                Each project demonstrates how mathematical principles and recursion can create complex and beautiful designs with relatively little code.
+            </p>
+        </div>
+    </section>
 
     <!-- Projects Section -->
-    <h2>Projects</h2>
+    <section class="section">
+        <div class="container">
+            <!-- Project 1 -->
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box art-box">
+                        <h3 class="title is-5">1. Fractal Tree - Cherry Blossom</h3>
+                        <p class="has-text-centered">
+                            This project uses recursion to generate a fractal tree that resembles a cherry blossom tree. 
+                            By recursively dividing and rotating branches, the tree grows outward into a detailed and natural-looking pattern. 
+                            It generates a different tree every time you run it.
+                        </p>
+                        <p class="has-text-centered">Here is an example of the fractal cherry blossom tree:</p>
+                        <figure class="image art-image">
+                            <img src="fractal_cherry_blossom.png" alt="Fractal Tree resembling a Cherry Blossom">
+                        </figure>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Project 1: Fractal Tree (Cherry Blossom) -->
-    <h3>1. Fractal Tree - Cherry Blossom</h3>
-    <p>
-        This project uses recursion to generate a fractal tree that resembles a cherry blossom tree. By recursively dividing and rotating branches, the tree grows outward into a detailed and natural-looking pattern. It generates a different tree every time you run it.
-    </p>
-    <p>Here is an example of the fractal cherry blossom tree:</p>
-    <img src="fractal_cherry_blossom.png" alt="Fractal Tree resembling a Cherry Blossom" width="400">
+            <!-- Project 2 -->
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box art-box">
+                        <h3 class="title is-5">2. Recursive Sierpinski Triangles</h3>
+                        <p class="has-text-centered">
+                            The Sierpinski Triangle is a well-known fractal that uses recursion to divide a triangle into smaller equilateral triangles. 
+                            Each step adds more detail to the pattern, resulting in a self-similar and infinitely complex structure.
+                        </p>
+                        <p class="has-text-centered">Here is an example of the Sierpinski Triangle:</p>
+                        <figure class="image art-image">
+                            <img src="sierpinski_triangles.png" alt="Recursive Sierpinski Triangle Fractal">
+                        </figure>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Project 2: Sierpinski Triangle -->
-    <h3>2. Recursive Sierpinski Triangles</h3>
-    <p>
-        The Sierpinski Triangle is a well-known fractal that uses recursion to divide a triangle into smaller equilateral triangles. Each step adds more detail to the pattern, resulting in a self-similar and infinitely complex structure.
-    </p>
-    <p>Here is an example of the Sierpinski Triangle:</p>
-    <img src="sierpinski_triangles.png" alt="Recursive Sierpinski Triangle Fractal" width="400">
-
-    <!-- Project 3: Recursive Circle Pattern -->
-    <h3>3. Recursive Fractal Circle Pattern</h3>
-    <p>
-        This project creates a mesmerizing fractal pattern using circles. At each step, smaller circles are added recursively around the perimeter of the current circles, resulting in intricate, layered designs.
-    </p>
-    <p>Here is an example of the recursive circle pattern:</p>
-    <img src="recursive_circles.png" alt="Recursive Fractal Circle Pattern" width="400">
+            <!-- Project 3 -->
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box art-box">
+                        <h3 class="title is-5">3. Recursive Fractal Circle Pattern</h3>
+                        <p class="has-text-centered">
+                            This project creates a mesmerizing fractal pattern using circles. 
+                            At each step, smaller circles are added recursively around the perimeter of the current circles, 
+                            resulting in intricate, layered designs.
+                        </p>
+                        <p class="has-text-centered">Here is an example of the recursive circle pattern:</p>
+                        <figure class="image art-image">
+                            <img src="recursive_circles.png" alt="Recursive Fractal Circle Pattern">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

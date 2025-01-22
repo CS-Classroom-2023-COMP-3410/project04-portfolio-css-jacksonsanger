@@ -5,36 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Jackson Sanger page of Jackson Sanger's Programming Portfolio">
     <title>Contact Me</title>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Navbar Script -->
+    <script src="scripts/navbar.js" defer></script>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <table>
-        <tr>
-            <td>
-                <nav>
-                    <a href="index.html"><b>Home</b></a> |
-                    <a href="about.html"><b>About Me</b></a> |
-                    <a href="technical_projects/technical_projects.html"><b>Technical Projects</b></a> |
-                    <a href="art_projects/art_projects.html"><b>Art Projects</b></a> |
-                    <a href="contact.html"><b>Contact</b></a>
-                </nav>
-            </td>
-        </tr>
-    </table>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <!-- Branding Section -->
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <strong>Jackson's Portfolio</strong>
+                </a>
+                <!-- Burger Icon for Mobile -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <!-- Navigation Links Section -->
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="about.html">About Me</a>
+                    <a class="navbar-item" href="technical_projects/technical_projects.html">Technical Projects</a>
+                    <a class="navbar-item" href="art_projects/art_projects.html">Art Projects</a>
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item" href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Contact Form Section -->
-    <h1>Contact Me</h1>
-    <p>Feel free to reach out to me using the form below!</p>
-    
-    <form action="mailto:jsanger05@gmail.com" method="post" enctype="text/plain">
-        Name: <input type="text" name="name"><br><br>
-        Email: <input type="text" name="email"><br><br>
-        Subject: <input type="text" name="subject"><br><br>
-        Message:<br>
-        <textarea name="message" rows="5" cols="30"></textarea><br><br>
-        <input type="submit" value="Send">
-        <input type="reset" value="Clear">
-    </form>
-    <!-- For fun comment -->
+    <section class="section">
+        <div class="container has-text-centered">
+            <h1 class="title">Contact Me</h1>
+            <p class="subtitle">Feel free to reach out to me using the form below!</p>
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <form action="mailto:jsanger05@gmail.com" method="post" enctype="text/plain">
+                        <!-- Name Field -->
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input class="input" type="text" name="name" placeholder="Your full name" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Email Field -->
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input class="input" type="email" name="email" placeholder="Your email address" required>
+                            </div>
+                        </div>
+
+                        <!-- Subject Field -->
+                        <div class="field">
+                            <label class="label">Subject</label>
+                            <div class="control">
+                                <input class="input" type="text" name="subject" placeholder="Subject of your message" required>
+                            </div>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit and Reset Buttons -->
+                        <div class="field is-grouped is-justify-content-center">
+                            <div class="control">
+                                <button class="button is-success" type="submit">Send</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-danger" type="reset">Clear</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

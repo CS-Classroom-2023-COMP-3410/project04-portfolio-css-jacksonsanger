@@ -5,82 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Technical Projects page of Jackson Sanger's Programming Portfolio">
     <title>Technical Projects</title>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Navbar Script -->
+    <script src="../scripts/navbar.js" defer></script>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <table>
-        <tr>
-            <td>
-                <nav>
-                    <a href="index.html"><b>Home</b></a> |
-                    <a href="about.html"><b>About Me</b></a> |
-                    <a href="technical_projects/technical_projects.html"><b>Technical Projects</b></a> |
-                    <a href="art_projects/art_projects.html"><b>Art Projects</b></a> |
-                    <a href="contact.html"><b>Contact</b></a>
-                </nav>
-            </td>
-        </tr>
-    </table>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <strong>Jackson's Portfolio</strong>
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="../about.html">About Me</a>
+                    <a class="navbar-item" href="technical_projects.html">Technical Projects</a>
+                    <a class="navbar-item" href="../art_projects/art_projects.html">Art Projects</a>
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Page Introduction -->
-    <h1>Technical Projects</h1>
-    <p>This page highlights projects that focus on technical and programming-based solutions. Some projects also feature visual elements for interactive and engaging user experiences.</p>
+    <section class="section">
+        <div class="container has-text-centered">
+            <h1 class="title">Technical Projects</h1>
+            <p class="subtitle">
+                This page highlights projects that focus on technical and programming-based solutions. Some projects also feature visual elements for interactive and engaging user experiences.
+            </p>
+        </div>
+    </section>
 
     <!-- Projects Section -->
-    <h2>Projects</h2>
+    <section class="section">
+        <div class="container">
+            <!-- Project 1 -->
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box art-box">
+                        <h3 class="title is-5">1. Sand Game - Python</h3>
+                        <p>
+                            An interactive game created with Python that simulates the realistic movement of particles and includes various game modes:
+                        </p>
+                        <ul>
+                            <li><b>Sand Mode:</b> Sand flows naturally, piling up at the bottom or over other sand.</li>
+                            <li><b>Floor Mode:</b> Draw floors that sand can flow over.</li>
+                            <li><b>Destroy Mode:</b> Fireballs appear, burning everything in their path.</li>
+                        </ul>
+                        <p>Here’s a preview of the game in action:</p>
+                        <div class="iframe-container">
+                            <iframe src="SandGame.gif" title="Sand Game Preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Project 1: Sand Game -->
-    <h3>1. Sand Game - Python</h3>
-    <p>
-        An interactive game created with Python that simulates the realistic movement of particles and includes various game modes:
-        <ul>
-            <li><b>Sand Mode:</b> Sand flows naturally, piling up at the bottom or over other sand.</li>
-            <li><b>Floor Mode:</b> Draw floors that sand can flow over.</li>
-            <li><b>Destroy Mode:</b> Fireballs appear, burning everything in their path.</li>
-        </ul>
-    </p>
-    <p>Here’s a preview of the game in action:</p>
-    <!-- Use title in iframe tags instead of alt since it doesn't have an alt attribute-->
-    <iframe width="560" height="581" src="SandGame.gif" frameborder="0" title="Visual demonstration of the interactive sand game"></iframe>
+            <!-- Project 2 -->
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box art-box">
+                        <h3 class="title is-5">2. Gray-Scale Topographic Map of Colorado</h3>
+                        <p>
+                            This project uses Python to generate a gray-scale topographic map of Colorado based on 425,000 elevation points:
+                        </p>
+                        <ul>
+                            <li><b>Light Pixels:</b> Represent higher elevations.</li>
+                            <li><b>Darker Pixels:</b> Represent lower elevations.</li>
+                            <li><b>Interactive Feature:</b> Displays the elevation at any point when clicked.</li>
+                        </ul>
+                        <p>Check out a preview of the map:</p>
+                        <div class="iframe-container">
+                            <iframe src="TopoMap.gif" title="Topographic Map Preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Project 2: Topographic Map -->
-    <h3>2. Gray-Scale Topographic Map of Colorado</h3>
-    <p>
-        This project uses Python to generate a gray-scale topographic map of Colorado based on 425,000 elevation points:
-        <ul>
-            <li><b>Light Pixels:</b> Represent higher elevations.</li>
-            <li><b>Darker Pixels:</b> Represent lower elevations.</li>
-            <li><b>Interactive Feature:</b> Displays the elevation at any point when clicked.</li>
-        </ul>
-    </p>
-    <p>Check out a preview of the map:</p>
-    <!-- Use title in iframe tags instead of alt since it doesn't have an alt attribute-->
-    <iframe width="560" height="431" src="TopoMap.gif" frameborder="0" title="Gray-scale topographic map of Colorado"></iframe>
+            <!-- Project 3 -->
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box art-box">
+                        <h3 class="title is-5">3. Distributed Blockchain Network</h3>
+                        <p>
+                            A blockchain network implemented in Java featuring:
+                        </p>
+                        <ul>
+                            <li>Cryptographic hashing and proof-of-work mining.</li>
+                            <li>A peer-to-peer distributed system with multithreaded node communication.</li>
+                            <li>Efficient block validation and propagation across the network.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Project 3: Distributed Blockchain Network -->
-    <h3>3. Distributed Blockchain Network</h3>
-    <p>
-        A blockchain network implemented in Java featuring:
-        <ul>
-            <li>Cryptographic hashing and proof-of-work mining.</li>
-            <li>A peer-to-peer distributed system with multithreaded node communication.</li>
-            <li>Efficient block validation and propagation across the network.</li>
-        </ul>
-    </p>
-
-    <!-- Project 4: Convex Hull Algorithms -->
-    <h3>4. Convex Hull Algorithms: Brute Force and QuickHull</h3>
-    <p>
-        Implemented two convex hull algorithms in Python to compare performance and visualize results:
-        <ul>
-            <li><b>Brute Force:</b> Simple, exhaustive approach with O(n³) complexity.</li>
-            <li><b>QuickHull:</b> Efficient divide-and-conquer algorithm with O(n log n) complexity.</li>
-            <li><b>Visualization:</b> Displays the computed convex hull on a canvas for validation.</li>
-            <li><b>Runtime Comparison:</b> Compares algorithm performance over increasing dataset sizes.</li>
-        </ul>
-    </p>
-    <p>Here is an example of the output:</p>
-    <img src="convex_hull_example.jpg" alt="The visual result of running the Convex Hull algorithm" width="400">
-
+            <!-- Project 4 -->
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box art-box">
+                        <h3 class="title is-5">4. Convex Hull Algorithms: Brute Force and QuickHull</h3>
+                        <p>
+                            Implemented two convex hull algorithms in Python to compare performance and visualize results:
+                        </p>
+                        <ul>
+                            <li><b>Brute Force:</b> Simple, exhaustive approach with O(n³) complexity.</li>
+                            <li><b>QuickHull:</b> Efficient divide-and-conquer algorithm with O(n log n) complexity.</li>
+                            <li><b>Visualization:</b> Displays the computed convex hull on a canvas for validation.</li>
+                            <li><b>Runtime Comparison:</b> Compares algorithm performance over increasing dataset sizes.</li>
+                        </ul>
+                        <p>Here is an example of the output:</p>
+                        <figure class="image art-image">
+                            <img src="convex_hull_example.jpg" alt="Convex Hull Visualization">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
